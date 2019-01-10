@@ -44,3 +44,10 @@ Our third vectorization method uses FastText subword embeddings to create a low-
 We use a context window of 10 and require a term to appear at least five times in our data.
 While FastText provides several pre-trained word vector datasets trained on Wikipedia and web pages, we build our own embedding model using a set of English tweets from Twitter's public sample stream, also from 2013-2016.
 
+### Featurization Models
+
+We provide the TF-IDF vectorizer built from a 1-percent sample of English tweets posted to Twitter and captured in Twitter's public sample stream between 2013 and 2016.
+You can download this vectorizer here: [2013to2016_tfidf_vectorizer_20190109.pkl](http://obj.umiacs.umd.edu/trecis_2018/2013to2016_tfidf_vectorizer_20190109.pkl)
+
+We also provide our FastText-trained model on this same set of English tweets, which you can find here: [archived_text_sample_2013to2016_gensim_200.model.tgz](http://obj.umiacs.umd.edu/trecis_2018/archived_text_sample_2013to2016_gensim_200.model.tgz)
+
