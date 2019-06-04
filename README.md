@@ -1,10 +1,8 @@
 # Overview
 
-This repository contains a set of experiments for the [Incident Streams](http://www.trecis.org) track at [TREC 2018](https://trec.nist.gov/).
+This repository contains a set of experiments for the [Incident Streams](http://www.trecis.org) track at [TREC 2019a](https://trec.nist.gov/).
 
 We leverage machine learning models of increasing complexity for classifying Twitter content according to an ontology of 23 crisis responder information needs. 
-Results demonstrate a simple set of one-versus-rest naive Bayes classifiers significantly outperforms a random baseline by an order of magnitude, but performance is still low (accuracy <50%).
-Enriching the dataset with FastText-based word vectors built from Twitter achieves only marginal performance increases, and expanding the training data through label propagation reduced performance.
 
 # Methods
 
@@ -24,12 +22,7 @@ Finally, we report F1 scores and accuracy for the final model in each of our fou
 
 ## Model Training
 
-We train our models using two datasets, the first of which is provided by the TREC-IS organizers and contains 1,261 rehydrated tweets across 23 classes, as shown in Table \ref{tab:class_dist}.
-Additionally, we create a sample, to which we will refer as the PROP set, of 741,859 tweets from Twitter's public sample stream between 2013 and 2016 that contain disaster-related vocabulary words identified by Buntain and Lim \cite{Buntain2018}.
-For the TREC-IS dataset, labels are provided by the track organizers; for the PROP set, however, we rely on scikit-learn's label spreading library.
-Label spreading uses a distance metric to propagate class labels from known instances to similar but unlabeled instances.
-In this implementation, we use the $k$ nearest neighbors metric, requiring at least $5$ manually labeled neighbors in our metric space to be "close" to an unlabeled sample to propagate the manual label.
-For scalability reasons, we downsample this PROP set to 20% of the total and, in Scenario 2, we use singular value decomposition to reduce dimensionality to 10 components.
+We train our models using the training and testing datasets from 2018 as well as the 2019a training dataset.
 
 ## Featurization
 
