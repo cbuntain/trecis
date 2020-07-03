@@ -48,7 +48,7 @@ While FastText provides several pre-trained word vector datasets trained on Wiki
 
 We provide the TF-IDF vectorizer built from a 1-percent sample of English tweets posted to Twitter and captured in Twitter's public sample stream between 2013 and 2016.
 This dataset contains 11,715,393 tweets.
-You can download this vectorizer here: [2013to2016_tfidf_vectorizer_20190109.pkl](http://obj.umiacs.umd.edu/trecis_2018/2013to2016_tfidf_vectorizer_20190109.pkl)
+You can download this vectorizer here: [2013to2016_tfidf_vectorizer_20190109.pkl](http://cody.bunta.in/bitbucket/2013to2016_tfidf_vectorizer_20190109.pkl)
 
 We also provide our FastText-trained model on this same set of English tweets, which you can find here: [archived_text_sample_2013to2016_gensim_200.model.tgz](http://obj.umiacs.umd.edu/trecis_2018/archived_text_sample_2013to2016_gensim_200.model.tgz)
 
